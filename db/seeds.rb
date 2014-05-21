@@ -12,12 +12,12 @@
 # Timeline.delete_all
 # Year.delete_all
 
-(1911..1921).each do |n|
+(1900..1920).each do |n|
 #API Key: #{WOLFRAM_ALPHA_CLIENT_ID}
-   # url = "http://api.wolframalpha.com/v2/query?input=events%20#{n}&appid=#{WOLFRAM_ALPHA_CLIENT_ID}"
+   url = "http://api.wolframalpha.com/v2/query?input=events%20#{n}&appid=#{WOLFRAM_ALPHA_CLIENT_ID}"
+   # url = "http://api.wolframalpha.com/v2/query?input=events%201912&appid=#{WOLFRAM_ALPHA_CLIENT_ID}"
    # url = "http://api.wolframalpha.com/v2/query?input=events%201900&appid='#{WOLFRAM_ALPHA_CLIENT_ID}'"
 
-    url = "http://api.wolframalpha.com/v2/query?input=events%20#{n}&appid=#{WOLFRAM_ALPHA_CLIENT_ID}"
     response = HTTParty.get(url)
     event_url = response["queryresult"]["pod"][1]["subpod"]
 
