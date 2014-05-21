@@ -12,9 +12,9 @@
 # Timeline.delete_all
 # Year.delete_all
 
-(1900..1920).each do |n|
+# (1900..1920).each do |n|
 #API Key: #{WOLFRAM_ALPHA_CLIENT_ID}
-   url = "http://api.wolframalpha.com/v2/query?input=events%20#{n}&appid=#{WOLFRAM_ALPHA_CLIENT_ID}"
+   url = "http://api.wolframalpha.com/v2/query?input=events%201900&appid=#{WOLFRAM_ALPHA_CLIENT_ID}"
    # url = "http://api.wolframalpha.com/v2/query?input=events%201912&appid=#{WOLFRAM_ALPHA_CLIENT_ID}"
    # url = "http://api.wolframalpha.com/v2/query?input=events%201900&appid='#{WOLFRAM_ALPHA_CLIENT_ID}'"
 
@@ -35,7 +35,7 @@
 
 
     Year.create({
-      title: "#{n}",
+      title: "1900",
       headline: "War",
       weather: "Rain",
       event_1: event_1,
@@ -43,7 +43,7 @@
       event_3: event_3,
       event_4: event_4,
       event_5: event_5,
-      year_name: "#{n}"
+      year_name: "1900"
       })
 
 end
