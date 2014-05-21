@@ -16,7 +16,7 @@
 #API Key: #{WOLFRAM_ALPHA_CLIENT_ID}
    # url = "http://api.wolframalpha.com/v2/query?input=events%20#{n}&appid=#{WOLFRAM_ALPHA_CLIENT_ID}"
    # url = "http://api.wolframalpha.com/v2/query?input=events%201900&appid='#{WOLFRAM_ALPHA_CLIENT_ID}'"
-   # url = "http://api.wolframalpha.com/v2/query?input=events%201900&appid=GG5G6Y-QJLR64PA98"
+
     url = "http://api.wolframalpha.com/v2/query?input=events%20#{n}&appid=#{WOLFRAM_ALPHA_CLIENT_ID}"
     response = HTTParty.get(url)
     event_url = response["queryresult"]["pod"][1]["subpod"]
