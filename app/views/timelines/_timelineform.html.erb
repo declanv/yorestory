@@ -1,0 +1,10 @@
+  <div class="col span_2_of_3_left">
+<h4> Create new timeline </h4>
+<%= form_for timeline_local do |f| %>
+  <%= f.text_field :title, {placeholder: "title"} %>
+ <%= f.text_field :begin_date, {placeholder: "birth year"} %>
+   <%= f.text_field :end_date, {placeholder: "death year or present"} %>
+
+  <%= f.submit %>
+<% end %>
+</d
