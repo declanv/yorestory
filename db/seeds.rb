@@ -12,9 +12,9 @@
 # Timeline.delete_all
 # Year.delete_all
 
-(1900..1910).each do |n|
+(1800..2014).each do |n|
 #API Key: #{WOLFRAM_ALPHA_CLIENT_ID}
-   url = "http://api.wolframalpha.com/v2/query?input=events%20#{n}&appid=XXXX"
+   url = "http://api.wolframalpha.com/v2/query?input=events%20#{n}&appid=#{WOLFRAM_ALPHA_CLIENT_ID}"
     response = HTTParty.get(url)
     event_url = response["queryresult"]["pod"][1]["subpod"]
 
@@ -42,13 +42,6 @@
       event_5: event_5,
       year_name: "#{n}"
       })
-
-    Milestone.create({
-    year_name: n,
-    title: "birth"
-
-    })
-
 
 end
 
