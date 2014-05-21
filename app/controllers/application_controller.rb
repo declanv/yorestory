@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
 #Should allow the user to log out by stripping the id from the route and then redirecting to
 #the login page.
 
-before_action :authenticate_with_basic_auth
+# before_action :authenticate_with_basic_auth
 
    # protected
 
