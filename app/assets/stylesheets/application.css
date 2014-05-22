@@ -16,6 +16,8 @@
 @import url(http://fonts.googleapis.com/css?family=Berkshire+Swash);
 @import url(http://fonts.googleapis.com/css?family=Quicksand:300,400,700);
 
+
+
 .user_photo {
   height: 100px;
   border: solid white 3px;
@@ -48,6 +50,11 @@ h3{
 h4{
   font-family: 'Quicksand', sans-serif;
   color: #2B2015;
+}
+h4.year{
+  font-family: 'Berkshire Swash', cursive;
+color: #fff;
+letter-spacing: 1px;
 }
 
 
@@ -130,7 +137,7 @@ size: 500px;
 }
 */
 ul.timeline_border {
-  border-left: thin solid rgba(255, 255, 255, 0.5);
+  border-left: thin rgba(255, 255, 255, 0.5);
 
 }
 
@@ -139,4 +146,18 @@ ul.milestone_year {
 
 li.no_decoration {
 text-decoration: none;
+}
+
+.break {
+  height: 120 px;
+}
+
+.event_break {
+height: 50px;
+padding: none;
+margin: none;
+}
+
+.right_milestone_col{
+border-left: thin rgba(255, 255, 255, 0.5);
 }

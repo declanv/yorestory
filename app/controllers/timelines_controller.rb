@@ -30,6 +30,14 @@ class TimelinesController < ApplicationController
 
     @year_date_1 = Year.find_by_title(@year_1.to_s)
     @year_date_2 = Year.find_by_title(@year_2.to_s)
+    @year_date_3 = Year.find_by_title(@year_3.to_s)
+    @year_date_4 = Year.find_by_title(@year_4.to_s)
+    @year_date_5 = Year.find_by_title(@year_5.to_s)
+    @year_date_6 = Year.find_by_title(@year_6.to_s)
+    @year_date_7 = Year.find_by_title(@year_7.to_s)
+    @year_date_8 = Year.find_by_title(@year_8.to_s)
+    @year_date_9 = Year.find_by_title(@year_9.to_s)
+    @year_date_10 = Year.find_by_title(@year_10.to_s)
 
     # @year = Year.find_by_milestone_id
     # @milestone_name = milestone.year_name

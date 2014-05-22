@@ -14,15 +14,28 @@
 	width: 66.13%;
 }
 
+.span_2_of_3_milestone {
+	width: 66.13%;
+	height: 200px;
+}
+
 .span_1_of_3_left {
 	width: 32.26%;
-	margin: 0px;
+	margin: 10%;
 	text-align: right;
+	@media_query: ;
 
 }
 
-.span_1_of_3_right {
+.col_span_1_of_3_left_year {
 	width: 32.26%;
+	margin: 0px;
+	text-align: right;
+	height: 50px;
+}
+
+.span_1_of_3_right {
+	width: 50%;
 	border-left: thin solid rgba(255, 255, 255, 0.5);
 	margin: 0px;
 }
