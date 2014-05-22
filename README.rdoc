@@ -26,3 +26,64 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+wdi_project_1
+=============
+
+Yorestory
+
+Name: Declan_Van_Welie
+Email: declanv@gmail.com
+GitHub: https://github.com/declanv
+
+Github URL: https://github.com/declanv/yorestory
+Heroku URL: http://arcane-mesa-4565.herokuapp.com/user/login
+
+Project 1 Planning & Deliverables:
+
+Scope:
+
+This app allows users to create an account, log in, and enter a birth year and death year (or present if still alive). The app will deliver back a timeline of historical events mapping to milestones in the person's life, based on their birth year and lifetime range.
+
+The app is intended to be entertaining in visualizing historical events in one’s lifetime. It's also supposed to be educational. I foresee the end-user searching the birthdate of their grandparents to better understand what their grandparents' or great-grandparents’ lives might have been like.
+
+The features are pretty straightforward. The user will enter one or two pieces of information: their birth year (or day) and their (or their relative/friends’) death year. The input will call up a timeline that will return information for major milestones in one’s life. 
+
+There were plenty of roadblocks along the way in getting the app to this point, but the biggest obstacle turned out to be an issue with the Wolfram Alpha API not consistently returning desired results. The query works about half the time, and times out otherwise. This prevented me from seeding my database on Heroku, although I was able to seed some information locally.
+
+I'm happy to have learned more about the rails structure, and to have gained more experience working with APIs.
+
+Object models:
+
+The app includes the following four models: users, timelines, milestones, and years.
+The milestones model is the join table between milestones and timelines.
+
+Resources:
+
+Rails:
+
+Ruby on Rails guides: http://guides.rubyonrails.org/
+
+ActiveRecord query: http://guides.rubyonrails.org/active_record_querying.html
+
+Google Fonts: https://www.google.com/fonts
+
+Wolfram Alpha:
+http://products.wolframalpha.com/api/
+
+Wolfram Alpha gem: https://github.com/cldwalker/wolfram
+
+Wolfram Alpha API Documentation: http://products.wolframalpha.com/docs/WolframAlpha-API-Reference.pdf
+
+Google Custom Search API:
+https://developers.google.com/custom-search/json-api/v1/overview
+
+Google Code Playground: https://code.google.com/apis/ajax/playground/#large_result_set
+
+Microsoft Getty Images Historical image API: https://github.com/gettyimages/connect
+
+Flickr api: https://www.flickr.com/services/api/
+
+Yahoo images API: https://developer.yahoo.com/boss/search/
+
+Youtube API: https://developers.google.com/youtube/
