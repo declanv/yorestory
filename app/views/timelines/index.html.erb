@@ -1,17 +1,17 @@
 <nav class= "nav">
-          <p><%= link_to "users", users_path %> | <%= link_to "timelines", timelines_path  %> | <%= link_to "logout", "user/logout"  %><br>
+          <p><%= link_to "users", users_path %> | <%= link_to "timelines", timelines_path  %><br>
         <%= " Welcome, #{current_user.name}" if current_user %>
       </p>
         </nav>
 <div class="section group">
 
 <h2>Timelines</h2>
+<%= render partial: "timelineform", locals: { timeline_local: @timeline, user: @user } %>
 </div>
 <div class="section group">
-   <%= render partial: "timelineform", locals: { timeline_local: @timeline, user: @user } %>
+
 <!-- LEFT-HAND COLUMN -->
-  <div class="col span_1_of_3_left">
-    <% link_to "new", "/timelineform" %>
+  <div class="col span_1_of_3_left_timelines">
 
   <ul class="timelines">
     <% @timelines.each do |timeline| %>

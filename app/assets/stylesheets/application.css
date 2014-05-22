@@ -120,7 +120,7 @@ hr.fancy-line:before, hr.fancy-line:after {
 }
 
 hr.fancy-line, hr.fancy-line:before {
-    background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,rgba(98, 127, 128,0.1) 75%);
+    background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,rgba(0, 0, 0, 0.1) 75%);
 }
 
 body, hr.fancy-line:after {
@@ -149,7 +149,7 @@ text-decoration: none;
 }
 
 .break {
-  height: 120 px;
+  height: 175px;
 }
 
 .event_break {
@@ -160,4 +160,15 @@ margin: none;
 
 .right_milestone_col{
 border-left: thin rgba(255, 255, 255, 0.5);
+float: right;
+}
+.left_milestone_col{
+border-right: thin rgba(255, 255, 255, 0.5);
+float: left;
+}
+
+.submit_class_login{
+border-radius: 150px;
+color: #fff;
+float: left;
 }

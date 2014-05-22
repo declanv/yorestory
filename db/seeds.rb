@@ -12,7 +12,7 @@
 # Timeline.delete_all
 # Year.delete_all
 
-(1900..1921).each do |n|
+(1921..1925).each do |n|
 
    url = "http://api.wolframalpha.com/v2/query?input=events%20#{n}&appid=#{WOLFRAM_ALPHA_CLIENT_ID}"
 

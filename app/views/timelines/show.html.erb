@@ -1,3 +1,8 @@
+<nav class= "nav">
+          <p><%= link_to "users", users_path %> | <%= link_to "timelines", timelines_path  %>
+      </p>
+        </nav>
+
 <div class="section group">
 
 
@@ -8,29 +13,7 @@
 <h4> <%= @milestone_title %> <%= @milestone_name %> </h4>
 </div>
 
- <div class="col span_3_of_3">
 
-<div class= "left_milestone_col">
-
-<ul class="milestone_year">
-  <h4 class="year"><%= @year_1 %></h4>
-  <div class="break"></div>
-
-</div>
-
-<div class= "right_milestone_col">
-
- <ul class="timeline_border">
-  <li class="triangle"><%= @year_date_1.event_1 %></li>
-  <li class="triangle"><%= @year_date_1.event_2 %></li>
-  <li class="triangle"><%= @year_date_1.event_3 %></li>
-  <li class="triangle"><%= @year_date_1.event_4 %></li>
-  <li class="triangle"><%= @year_date_1.event_5 %></li>
-  <div class="event_break"></div>
-
-</div>
-
-</div>
 
  <div class="col span_1_of_3_left_year">
 <div class= "timeline_border" >
