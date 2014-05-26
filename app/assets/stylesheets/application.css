@@ -25,7 +25,7 @@
 }
 
 h1{
-font-family: 'Berkshire Swash', cursive;
+font-family: 'Berkshire Swash', sans-serif; /*cursive;*/
 color: #3D2230;
  -webkit-font-feature-settings: "kern";
   -moz-font-feature-settings: "kern";
@@ -52,7 +52,7 @@ h4{
   color: #2B2015;
 }
 h4.year{
-  font-family: 'Berkshire Swash', cursive;
+  font-family: 'Berkshire Swash', sans-serif; /*cursive;*/
 color: #fff;
 letter-spacing: 1px;
 }
@@ -172,3 +172,5 @@ border-radius: 150px;
 color: #fff;
 float: left;
 }
+
+
