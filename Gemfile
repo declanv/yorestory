@@ -32,6 +32,7 @@ gem 'faker'
 gem 'bcrypt'
 gem 'httparty'
 gem 'rails_12factor', group: :production
+gem 'wikipedia-client'
 
 
 # Use ActiveModel has_secure_password
