@@ -15,6 +15,8 @@ class TimelinesController < ApplicationController
 
     milestone = Milestone.where(timeline_id: params[:id])
 
+    @year_image = Year.find_by_title("1922")
+
 
     @year_1 = milestone[0].year_name
     @year_2 = milestone[1].year_name
@@ -82,7 +84,13 @@ def create
 
   Milestone.build(end_date, begin_date, year_id, timeline_id)
 
-  redirect_to timelines_path
+  #Attempting to redirect to newly created timeline:
+
+
+  redirect_to "/timelines/#{params[:id]}"
+
+
+  # redirect_to timelines_path
 end
 
 #This method should allow the user to edit the start_date and end_date of the timeline.

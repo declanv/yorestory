@@ -5,3 +5,14 @@
   <%= @user.bio %>
 </p>
 <img class="user_photo" src=<%= @user.photo %>>
+
+  <div class="col span_1_of_3_left_timelines">
+
+  <ul class="timelines">
+    <% @user.timelines.each do |timeline| %>
+      <li>
+        <h4><%= link_to timeline.title, "/timelines/#{timeline.id}" %></h4>
+      </li>
+    <% end %>
+  </ul>
+  </div>

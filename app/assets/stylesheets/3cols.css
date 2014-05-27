@@ -49,6 +49,12 @@
 	margin: 0px;
 }
 
+.right_milestone_col {
+	width: 70%;
+	border-left: thin solid rgba(255, 255, 255, 0.5);
+	margin: 0px;
+}
+
 
 /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
 

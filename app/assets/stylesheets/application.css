@@ -55,6 +55,7 @@ h4.year{
   font-family: 'Berkshire Swash', sans-serif; /*cursive;*/
 color: #fff;
 letter-spacing: 1px;
+text-align: right;
 }
 
 
@@ -142,6 +143,7 @@ ul.timeline_border {
 }
 
 ul.milestone_year {
+  text-align: right;
 }
 
 li.no_decoration {
@@ -161,10 +163,13 @@ margin: none;
 .right_milestone_col{
 border-left: thin rgba(255, 255, 255, 0.5);
 float: right;
+text-align: left;
+
 }
 .left_milestone_col{
 border-right: thin rgba(255, 255, 255, 0.5);
 float: left;
+text-align: right;
 }
 
 .submit_class_login{
@@ -174,3 +179,22 @@ float: left;
 }
 
 
+.user_panel{
+
+  display: inline;
+  max-width: 300px;
+}
+
+.photo{
+  float: left;
+  margin-right: 10px;
+}
+.info{
+  float: left;
+}
+
+img.year_image {
+  height: 200px;
+  border: thin white 1px;
+  border-radius: 100px;
+}

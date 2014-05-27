@@ -3,7 +3,22 @@
         <%= " Welcome, #{current_user.name}" if current_user %>
       </p>
         </nav>
+
+          <div class="user_panel">
+    <div class="photo">
+<img class="user_photo" src=<%= @user.photo %>>
+</div>
+<div class="info">
+  <h2 class="user_name">
+  <%= @user.name %>
+</h2>
+<p class="user_bio">
+  <%= @user.bio %>
+</p>
+</div>
+</div>
 <div class="section group">
+
 
 <h2>Timelines</h2>
 <%= render partial: "timelineform", locals: { timeline_local: @timeline, user: @user } %>
