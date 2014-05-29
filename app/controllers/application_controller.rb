@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+
 # Copy/Pasted from http://railscasts.com/episodes/250-authentication-from-scratch
 
 
@@ -24,39 +25,53 @@ class ApplicationController < ActionController::Base
    #    redirect_to "/user/login"
    #  end
 
+   #The belowis copy/pasted from the tunr example:
 
-  def authenticate_with_basic_auth
-    # this will be called from controller before any action
-    unless @current_user
-      # grabs email, password
-      authenticate_or_request_with_http_basic do |email, password|
-        # feeds the values through our self.authenticated? class method
-
-        # set their return value to @current_user
-        @current_user = User.authenticated?(email, password)
-
-        # or redirect on failure???
-        # unless @current_user
-        #   redirect_to root_path
-        # end
-        # resume letting the user into the site
-      end
-    else
-      @current_user
-    end
-  end
-
-  # something here
-  helper_method :current_user
-
-  # public getter for a normally private instance variable
   def current_user
-    @current_user
+    @current_user ||= User.find_by(id: session[:user_id])
   end
 
-  # # example of a helper
-  # def make_link_tag(url)
-  #   "<a href='#{url}'>link</a>"
-  # end
+  def logged_in?
+    current_user.present?
+  end
 
+  helper_method :current_user, :logged_in?
 end
+
+#The below was what I had before for authentication:s
+
+#   def authenticate_with_basic_auth
+#     # this will be called from controller before any action
+#     unless @current_user
+#       # grabs email, password
+#       authenticate_or_request_with_http_basic do |email, password|
+#         # feeds the values through our self.authenticated? class method
+
+#         # set their return value to @current_user
+#         @current_user = User.authenticated?(email, password)
+
+#         # or redirect on failure???
+#         # unless @current_user
+#         #   redirect_to root_path
+#         # end
+#         # resume letting the user into the site
+#       end
+#     else
+#       @current_user
+#     end
+#   end
+
+#   # something here
+#   helper_method :current_user
+
+#   # public getter for a normally private instance variable
+#   def current_user
+#     @current_user
+#   end
+
+#   # # example of a helper
+#   # def make_link_tag(url)
+#   #   "<a href='#{url}'>link</a>"
+#   # end
+
+# end

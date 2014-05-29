@@ -3,47 +3,84 @@ Rails.application.routes.draw do
 root to: "home#index"
 
 # users routes
-
-get "/users" => "users#index"
-
- get "/users/:id" => "users#show"
-
- get "/user/new" => "users#new"
-
- post "/users" => "users#create"
-
- get "user/login" => "users#login"
-
- get "users/logout" => "users#logout", :as => "logout"
-
- post "/user/login" => "users#process_login"
+resources :users #do
+  resources :timelines
+    # collection do
+    #   get "search"
+    # end
+#end
+  # get "/signup", to: "users#new", as: "new_user"
+#login goes here:
 
 
+# resources :timelines do
+#   # collection do
+#   #   # get "search"
+#   # end
+# end
 
-# timelines routes
+# resources :milestones do
+#     collection do
+#       resources :years, only: [show]
+#     # get "search"
+#   end
+# end
 
-get "/timelines" => "timelines#index"
 
-get "/timelines/:id" => "timelines#show", as: :timeline
+  resource :session, only: [:create, :destroy]
+  get "/login", to: "sessions#new", as: "new_session"
 
-get "/timelines/:id/edit" => "timelines#edit", as: :edit_timeline
+# end
 
-#Look up what patch does...
-patch "/timelines/:id" => "timelines#update"
+#Tunr sessions info:
+  #resources :sessions, only: [:new, :create, :destroy]
+  get "/user/login", to: "sessions#new"
+  post "/session", to: "sessions#create"
+  delete "/session", to: "sessions#destroy"
 
-post "/timelines" => "timelines#create"
+  # root "home#index"
+end
 
-# milestones routes
-post "/milestones" => "milestones#create"
+# get "/users" => "users#index"
 
-  # get one milestone
-get "/milestones/:id" => "milestones#show", as: :milestone
+#  get "/users/:id" => "users#show"
 
-  # get EDIT form for milestones
-get "/milestones/:id/edit" => "milestones#edit", as: :edit_milestone
+#  get "/user/new" => "users#new"
 
-  # process form data for UPDATE or edit actions
-patch "/milestones/:id" => "milestones#update"
+#  post "/users" => "users#create"
+
+#  get "user/login" => "users#login"
+
+#  get "users/logout" => "users#logout", :as => "logout"
+
+#  post "/user/login" => "users#process_login"
+
+
+
+# # timelines routes
+
+# get "/timelines" => "timelines#index"
+
+# get "/timelines/:id" => "timelines#show", as: :timeline
+
+# get "/timelines/:id/edit" => "timelines#edit", as: :edit_timeline
+
+# #Look up what patch does...
+# patch "/timelines/:id" => "timelines#update"
+
+# post "/timelines" => "timelines#create"
+
+# # milestones routes
+# post "/milestones" => "milestones#create"
+
+#   # get one milestone
+# get "/milestones/:id" => "milestones#show", as: :milestone
+
+#   # get EDIT form for milestones
+# get "/milestones/:id/edit" => "milestones#edit", as: :edit_milestone
+
+#   # process form data for UPDATE or edit actions
+# patch "/milestones/:id" => "milestones#update"
 
 # # pasted from: http://railscasts.com/episodes/250-authentication-from-scratch
 # get "log_out" => "sessions#destroy", :as => "log_out"
@@ -53,4 +90,4 @@ patch "/milestones/:id" => "milestones#update"
 # resources :users
 # resources :sessions
 
-end
+# end

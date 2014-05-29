@@ -1,6 +1,8 @@
 class TimelinesController < ApplicationController
 
-  before_action :authenticate_with_basic_auth
+  # before_action :authenticate_with_basic_auth
+
+  before_action :authenticate, :authorize, only: [:edit, :update]
 
   def index
     @timelines = Timeline.order(id: :desc)
