@@ -51,10 +51,34 @@
 
 #creating a seed file for the 1930s:
 
-# (1922).each do |n|
+(1900..2000).each do |n|
+
+  if n <= 1910
+    y = "1900"
+  elsif n <= 1920
+    y = "1910"
+  elsif n <= 1930
+    y = "1920"
+  elsif n <= 1945
+    y = "1930-45"
+  elsif n <= 1960
+    y = "1945-60"
+  elsif n <= 1970
+    y = "1960"
+  elsif n <= 1980
+    y = "1970"
+  elsif n <= 1990
+    y = "1980"
+  elsif n <= 2000
+    y = "1990"
+
+  end
+
+fashion_images = Wikipedia.find('#{y}s in fashion')
+
 
   # thirties = Wikipedia.find('1930–45 in fashion')
-  require 'Wikipedia'
+  # require 'Wikipedia'
 
     #  url = "http://api.wolframalpha.com/v2/query?input=events%201922&appid=#{WOLFRAM_ALPHA_CLIENT_ID}"
 
@@ -66,16 +90,15 @@
 
     #^ Ask Neel if the above will make API calls each time I search within the hash, or if once I've got it...I've got it, and can search throughout.
 
-    event_1 = event_url[0]["plaintext"]
-    event_2 = event_url[1]["plaintext"]
-    event_3 = event_url[2]["plaintext"]
-    event_4 = event_url[3]["plaintext"]
-    event_5 = event_url[4]["plaintext"]
+    # event_1 = event_url[0]["plaintext"]
+    # event_2 = event_url[1]["plaintext"]
+    # event_3 = event_url[2]["plaintext"]
+    # event_4 = event_url[3]["plaintext"]
+    # event_5 = event_url[4]["plaintext"]
 
 
-  twenties = Wikipedia.find( '1920s in Western fashion' )
 
-  wiki_images = twenties.image_urls
+  fashion_image_urls = fashion_images.image_urls
 
      image_1 = wiki_images[1]
      image_1 = wiki_images[2]
@@ -86,7 +109,7 @@
 
     Year.create({
       title: "1922",
-      headline: "War",
+      headline: headline,
       weather: "Rain",
       event_1: event_1,
       event_2: event_2,
@@ -97,7 +120,7 @@
       fashion_image_1:
       })
 
-# end
+end
 
 
 
