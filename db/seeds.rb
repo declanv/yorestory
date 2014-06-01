@@ -49,7 +49,7 @@
 
 # end
 
-#creating a seed file for the 1930s:
+Year.delete_all
 
 (1900..2000).each do |n|
 
@@ -75,6 +75,13 @@
   end
 
 fashion_images = Wikipedia.find('#{y}s in fashion')
+fashion_image_urls = fashion_images.image_urls
+
+     image_1 = wiki_images[1]
+     image_2 = wiki_images[2]
+     image_3 = wiki_images[3]
+     image_4 = wiki_images[4]
+     image_5 = wiki_images[5]
 
 
   # thirties = Wikipedia.find('1930–45 in fashion')
@@ -96,19 +103,22 @@ fashion_images = Wikipedia.find('#{y}s in fashion')
     # event_4 = event_url[3]["plaintext"]
     # event_5 = event_url[4]["plaintext"]
 
+    start_year = n
+    end_year = n + 1
 
 
-  fashion_image_urls = fashion_images.image_urls
+      nytimes_url = "http://api.nytimes.com/svc/search/v2/articlesearch.json?q=front%20page%201&facet_field=source&begin_date=#{start_year}0101&end_date=#{end_year}1231&facet_filter=true&api-key=#{NYTIMES_CLIENT_ID}"
 
-     image_1 = wiki_images[1]
-     image_1 = wiki_images[2]
-     image_1 = wiki_images[3]
-     image_1 = wiki_images[4]
-     image_1 = wiki_images[5]
+
+      nytimes_response = HTTParty.get(nytimes_url)
+
+      headline = nytimes_response["response"]["docs"][0]["snippet"]
+
+
 
 
     Year.create({
-      title: "1922",
+      title: "n",
       headline: headline,
       weather: "Rain",
       event_1: event_1,
@@ -116,8 +126,12 @@ fashion_images = Wikipedia.find('#{y}s in fashion')
       event_3: event_3,
       event_4: event_4,
       event_5: event_5,
-      year_name: 1922,
-      fashion_image_1:
+      year_name: n,
+      fashion_image_1: image_1,
+      fashion_image_2: image_2,
+      fashion_image_3: image_3,
+      fashion_image_4: image_4,
+      fashion_image_5: image_5
       })
 
 end
