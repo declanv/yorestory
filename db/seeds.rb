@@ -77,7 +77,11 @@
 
   wiki_images = twenties.image_urls
 
-  image = wiki_images[2]
+     image_1 = wiki_images[1]
+     image_1 = wiki_images[2]
+     image_1 = wiki_images[3]
+     image_1 = wiki_images[4]
+     image_1 = wiki_images[5]
 
 
     Year.create({
@@ -90,7 +94,7 @@
       event_4: event_4,
       event_5: event_5,
       year_name: 1922,
-      image: image
+      fashion_image_1:
       })
 
 # end
