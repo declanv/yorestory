@@ -56,11 +56,11 @@
   # thirties = Wikipedia.find('1930–45 in fashion')
   require 'Wikipedia'
 
-     url = "http://api.wolframalpha.com/v2/query?input=events%201922&appid=#{WOLFRAM_ALPHA_CLIENT_ID}"
+    #  url = "http://api.wolframalpha.com/v2/query?input=events%201922&appid=#{WOLFRAM_ALPHA_CLIENT_ID}"
 
 
-    response = HTTParty.get(url)
-    event_url = response["queryresult"]["pod"][1]["subpod"]
+    # response = HTTParty.get(url)
+    # event_url = response["queryresult"]["pod"][1]["subpod"]
 
      # ^ This will return an array of hashes. Once I've got the array, I can probably strip out the plaintext from each of the hashes inside...that way I don't have to make a new api call for each hash's content.
 

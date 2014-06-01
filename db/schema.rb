@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140526175408) do
+ActiveRecord::Schema.define(version: 20140601013027) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,7 +57,11 @@ ActiveRecord::Schema.define(version: 20140526175408) do
     t.string   "event_5"
     t.string   "title"
     t.integer  "year_name"
-    t.string   "image"
+    t.string   "fashion_image_1"
+    t.string   "fashion_image_2"
+    t.string   "fashion_image_3"
+    t.string   "fashion_image_4"
+    t.string   "fashion_image_5"
   end
 
 end

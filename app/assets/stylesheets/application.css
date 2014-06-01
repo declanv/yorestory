@@ -58,6 +58,22 @@ letter-spacing: 1px;
 text-align: right;
 }
 
+.milestone_sections{
+
+padding: none;
+margin-left: 15px;
+margin-top: 30px;
+}
+
+h5.milestone_title{
+font-family: 'Quicksand', sans-serif;/*cursive;*/
+color: #fff;
+letter-spacing: 1px;
+text-align: left;
+}
+
+
+
 
 ul {
 
