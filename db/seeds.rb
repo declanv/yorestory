@@ -49,6 +49,8 @@
 
 # end
 
+require 'wikipedia'
+
 Year.delete_all
 
 (1900..2000).each do |n|
@@ -77,11 +79,11 @@ Year.delete_all
 fashion_images = Wikipedia.find('#{y}s in fashion')
 fashion_image_urls = fashion_images.image_urls
 
-     image_1 = wiki_images[1]
-     image_2 = wiki_images[2]
-     image_3 = wiki_images[3]
-     image_4 = wiki_images[4]
-     image_5 = wiki_images[5]
+     image_1 = fashion_image_urls[1]
+     image_2 = fashion_image_urls[2]
+     image_3 = fashion_image_urls[3]
+     image_4 = fashion_image_urls[4]
+     image_5 = fashion_image_urls[5]
 
 
   # thirties = Wikipedia.find('1930–45 in fashion')
