@@ -14,3 +14,13 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(function){
+
+$( "#less-link" ).click(function() {
+  $( "#text" ).slideToggle( "slow", function() {
+    // Animation complete.
+  });
+});
+
+});

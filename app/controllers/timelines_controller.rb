@@ -43,6 +43,10 @@ class TimelinesController < ApplicationController
     @year_date_9 = Year.find_by_title(@year_9.to_s)
     @year_date_10 = Year.find_by_title(@year_10.to_s)
 
+    # @year_image_1 = @year_date_1
+    # @year_image_2 = @year_date_2
+    # @year_image_3 = @year_date_3
+
     # @year = Year.find_by_milestone_id
     # @milestone_name = milestone.year_name
     # @milestone_title = milestone.title.upcase

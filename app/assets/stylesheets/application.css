@@ -211,6 +211,11 @@ float: left;
 
 img.year_image {
   height: 200px;
+  width: auto;
   border: thin white 1px;
   border-radius: 100px;
+}
+
+.year-line {
+border-bottom: thin solid rgba(255, 255, 255, 0.5);
 }
