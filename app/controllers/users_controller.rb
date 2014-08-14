@@ -29,7 +29,6 @@ class UsersController < ApplicationController
     # show me one user
      @user = User.find(params[:id])
     # render json: @user
-
   end
 
   def edit

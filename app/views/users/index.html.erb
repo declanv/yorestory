@@ -14,7 +14,11 @@
 <p class="user_bio">
   <%= user.bio %>
 </p>
+<% if user.photo.blank? == false %>
 <img class="user_photo" src=<%= user.photo %>>
+<% else %>
+<img class="user_photo" src="http://www.nobelprize.org/nobel_prizes/literature/laureates/1953/churchill.jpg">
+<%end%>
       <p>
         <ul class="timelines">
         <% user.timelines.each do |timeline| %>
